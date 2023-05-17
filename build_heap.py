@@ -18,7 +18,9 @@ def build_heap(data):
     return swaps
 
 def main():
-    n = int(input()[:-3])
+    inp = input()[:-3]
+    print(inp)
+    n = int(inp)
     data = list(map(int, input().split()))
 
     assert len(data) == n
