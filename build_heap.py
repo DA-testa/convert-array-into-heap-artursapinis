@@ -21,7 +21,7 @@ def main():
     inp = input().strip()
     inputt = input()
     n = int(inputt)
-    data = input().strip().split()
+    data = input().split()
 
     assert len(data) == n
 
