@@ -1,5 +1,4 @@
 import math
-import re
 
 def build_heap(data):
     swaps = []
@@ -19,12 +18,13 @@ def build_heap(data):
     return swaps
 
 def main():
-    inp = input()
-    print(re.sub(r"\D", "", inp))
+    inp = input().strip()
     n = int(inp)
-    data = list(map(int, input().split()))
+    data = input().strip().split()
 
     assert len(data) == n
+
+    data = [int(x) for x in data]
 
     swaps = build_heap(data)
 
