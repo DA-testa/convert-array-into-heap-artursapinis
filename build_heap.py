@@ -14,18 +14,15 @@ def build_heap(data):
         if i != i_max:
             swaps.append((i, i_max))
             data[i], data[i_max] = data[i_max], data[i]
-            swaps.extend(build_heap(data[i_max:]))
+            swaps.extend(build_heap(data))
     return swaps
 
 def main():
     inp = input().strip()
-    inputt = input()
-    n = int(inputt)
-    data = input().split()
+    n = int(input())
+    data = list(map(int, input().split()))
 
     assert len(data) == n
-
-    data = [int(x) for x in data]
 
     swaps = build_heap(data)
 
