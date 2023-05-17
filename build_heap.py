@@ -20,7 +20,7 @@ def build_heap(data):
 def main():
     inp = input().strip()
     n = int(input())
-    data = list(map(int, input().split()))
+    data = list(map(int, input().strip().split()))
 
     assert len(data) == n
 
